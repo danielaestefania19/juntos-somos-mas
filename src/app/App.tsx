@@ -1,13 +1,16 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Home from "../pages/Home";
+import AvisoPrivacidad from "../components/AvisoPrivacidad";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-export default function App() {
+function App() {
   return (
-    <div>
-      <Navbar />
-        <Home />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aviso-privacidad" element={<AvisoPrivacidad />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+export default App;
